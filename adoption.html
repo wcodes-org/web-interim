@@ -97,13 +97,16 @@ h1, h3 {
 }
 
 h2 {
-	font-size: 1.22em;
 	color: #AAAAAA !important;
 }
 
 h2 > .key {
-	font-size: 1.5em;
+	font-size: 1.12em;
 	color: #69b7cf !important;
+}
+
+h2 > .minor {
+	font-size: 0.82em;
 }
 
 h4 {
@@ -147,7 +150,7 @@ blockquote {
 	clear: both;
 	overflow: hidden
 }
-
+/* 
 .content {
 	font-size: 16px
 }
@@ -163,6 +166,12 @@ blockquote {
 
 .content p {
 	padding-left: 20px
+}
+*/
+#content p.first-letter-high::first-letter {
+	color: #69b7cf;
+	font-size: 240%;
+	padding-right: 2px;
 }
 
 .content-low {
@@ -1933,8 +1942,44 @@ ul li span {
 			<div class='content-li-title'>Active</div>
 			The WCode sub system can be inserted into an existing system.<br>
 			Both the sender and receiver will require the WCode converter attached to the IO Channel.
-			<div class="diagram center">
-				<img src='/resource/adoption-active.png' alt="encoder and decoder embedded in sender and receiver respectively" />
+			<div class="diagram image center">
+				<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.2" baseProfile="tiny"
+	 id="svg2" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-290 412 668 150"
+	 xml:space="preserve">
+<g id="layer1" transform="translate(-54,-181.79077)">
+	<path id="rect2985-1" fill="#B4B4B4" d="M209.5,743.8h215c4.1,0,7.5-3.4,7.5-7.5v-135c0-4.1-3.4-7.5-7.5-7.5h-215
+		c-4.1,0-7.5,3.4-7.5,7.5v135C202,740.4,205.4,743.8,209.5,743.8z"/>
+	<g id="flowRoot3787">
+	</g>
+	<path id="rect2985" fill="#B4B4B4" d="M-229.5,593.8h217c3.6,0,6.5,2.9,6.5,6.5v137c0,3.6-2.9,6.5-6.5,6.5h-217
+		c-3.6,0-6.5-2.9-6.5-6.5v-137C-236,596.7-233.1,593.8-229.5,593.8z"/>
+	<g id="flowRoot3844">
+	</g>
+	<g id="g3971">
+		<path id="rect3824" fill="#C8C8C8" d="M-85.5,637.8h71c4.7,0,8.5,3.8,8.5,8.5v41c0,4.7-3.8,8.5-8.5,8.5h-71
+			c-4.7,0-8.5-3.8-8.5-8.5v-41C-94,641.6-90.2,637.8-85.5,637.8z"/>
+		<text id="text23" transform="matrix(0.9844 0 0 1 -74.3291 663.4763)" font-family="'Abel'" font-size="18.0928px">WCode</text>
+		<text id="text25" transform="matrix(0.9844 0 0 1 -78.1816 685.1873)" font-family="'Abel'" font-size="18.0928px">Encoder</text>
+		<text id="text27" transform="matrix(0.9844 0 0 1 -50.6162 706.8992)" font-family="'Abel'" font-size="18.0928px"> </text>
+	</g>
+	<g id="g4013">
+		<g id="g4006">
+			<path id="rect3824-0" fill="#C8C8C8" d="M210,637.8h72c4.4,0,8,3.6,8,8v42c0,4.4-3.6,8-8,8h-72c-4.4,0-8-3.6-8-8v-42
+				C202,641.4,205.6,637.8,210,637.8z"/>
+		</g>
+		<text id="text32" transform="matrix(0.9838 0 0 1 221.6975 663.7605)" font-family="'Abel'" font-size="18.0928px">WCode</text>
+		<text id="text34" transform="matrix(0.9838 0 0 1 217.5818 685.4714)" font-family="'Abel'" font-size="18.0928px">Decoder</text>
+		<text id="text36" transform="matrix(0.9838 0 0 1 245.208 707.1824)" font-family="'Abel'" font-size="18.0928px"> </text>
+	</g>
+	<g id="g3942" transform="translate(2)">
+		<path id="path3915" fill="#8C8C8C" d="M182.5,668.4H2c0,0-1-0.5-1-1.6c0-1.2,1-1.6,1-1.6h180.5v-6.1l9.8,7.6l-9.8,7.6V668.4z"/>
+	</g>
+	<text id="text13" transform="matrix(1 0 0 1 -154 618.8622)" font-family="'Abel'" font-size="18px">Sender</text>
+	<text id="text16" transform="matrix(1 0 0 1 286.9248 618.3046)" font-family="'Abel'" font-size="18px">Receiver</text>
+</g>
+</svg>
 			</div>
 			A WCode Encoder will encode the output right before it is dispatched to the receiver.<br>
 			A WCode Decoder will decode it back to the original data before processing it further.<br>
@@ -1945,8 +1990,50 @@ ul li span {
 			<div class='content-li-title'>Passive</div>
 			Without modifying the receiving system &ndash; a separate standalone tool can be used to input WCodes and<br>
 			&ndash; relay decoded data directly to the target.
-			<div class="diagram center">
-				<img src='/resource/adoption-passive.png' alt="encoder may or maynot be embedded in sender; standalone decoder at receiver end" />
+			<div class="diagram image center">
+				<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.2" baseProfile="tiny"
+	 id="svg2" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-145 206 668 150"
+	 xml:space="preserve">
+<g id="layer3">
+	<path id="rect2985" fill="#B4B4B4" d="M-138.5,206h217c3.6,0,6.5,2.9,6.5,6.5v137c0,3.6-2.9,6.5-6.5,6.5h-217
+		c-3.6,0-6.5-2.9-6.5-6.5v-137C-145,208.9-142.1,206-138.5,206z"/>
+	<text transform="matrix(1 0 0 1 -63 231.0714)" font-family="'Abel'" font-size="18px">Sender</text>
+	<path id="rect2985-1" fill="#B4B4B4" d="M300.5,356h215c4.1,0,7.5-3.4,7.5-7.5v-135c0-4.1-3.4-7.5-7.5-7.5h-215
+		c-4.1,0-7.5,3.4-7.5,7.5v135C293,352.6,296.4,356,300.5,356z"/>
+	<text transform="matrix(1 0 0 1 377.9248 230.5138)" font-family="'Abel'" font-size="18px">Receiver</text>
+	<g id="g3980" transform="translate(-10.5,-181.79077)">
+		<path id="rect3982" fill="#C8C8C8" d="M59.5,431.8h71c4.7,0,8.5,3.8,8.5,8.5v41c0,4.7-3.8,8.5-8.5,8.5h-71c-4.7,0-8.5-3.8-8.5-8.5
+			v-41C51,435.6,54.8,431.8,59.5,431.8z"/>
+		<text transform="matrix(0.9844 0 0 1 65.2208 457.7605)" font-family="'Abel'" font-size="18.0928px">WCode</text>
+		<text transform="matrix(0.9844 0 0 1 61.622 479.4719)" font-family="'Abel'" font-size="18.0928px">Encoder</text>
+	</g>
+	<g id="g4023" transform="translate(-178,-181.79077)">
+		<g id="g4025">
+			<g id="g4078" transform="translate(-2)">
+				<path id="rect4004" fill="none" stroke="#000000" stroke-width="1.2783" d="M341.3,396.2h98.2c6.9,0,12.5,5.6,12.5,12.5v76.5
+					c0,6.9-5.6,12.5-12.5,12.5h-98.2c-6.9,0-12.5-5.6-12.5-12.5v-76.5C328.8,401.8,334.4,396.2,341.3,396.2z"/>
+			</g>
+		</g>
+		<g id="g3067" transform="translate(-0.79549515)">
+			<path id="rect4027" fill="#C8C8C8" d="M353,431.8h72c4.4,0,8,3.6,8,8v42c0,4.4-3.6,8-8,8h-72c-4.4,0-8-3.6-8-8v-42
+				C345,435.4,348.6,431.8,353,431.8z"/>
+			<text transform="matrix(0.9838 0 0 1 359.583 457.3855)" font-family="'Abel'" font-size="18.0928px">WCode</text>
+			<text transform="matrix(0.9838 0 0 1 355.4958 479.0964)" font-family="'Abel'" font-size="18.0928px">Decoder</text>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 191.4299 228.8976)" font-family="'Abel'" font-size="11px">External</text>
+	<text transform="matrix(1 0 0 1 162.9641 243)" font-family="'Abel'" font-size="11px">Interface</text>
+	<text transform="matrix(1 0 0 1 206.8439 243)" font-family="'Abel'" font-size="11px">Application</text>
+	<g id="g4062" transform="matrix(0.79154868,0,0,1,-90.201157,-181.79077)">
+		<path id="path4066" fill="#8C8C8C" d="M289.3,468.3l9.8-7.6l-9.8-7.6l0,6.1h-11.5v3.2h11.5L289.3,468.3z"/>
+	</g>
+	<g id="g4071" transform="matrix(0.79154868,0,0,1,54.673843,-181.79077)">
+		<path id="path4075" fill="#8C8C8C" d="M289.3,468.3l9.8-7.6l-9.8-7.6l0,6.1h-11.5v3.2h11.5L289.3,468.3z"/>
+	</g>
+</g>
+</svg>
 			</div>
 			<br>
 			e.g. A separate software, similar to the <em>Google Transliterate Tool</em>, can take WCode input and relay the decoded data to, say, a designated field of a GUI form.
@@ -1979,7 +2066,7 @@ ul li span {
 		<div id='updated'>
 			Updated:
 			<span id='date'>
-				2018 Apr 23			</span>
+				2018 Sep 29			</span>
 		</div>
 	</div>
 	<div class='shadow-scroll-bottom'></div>
@@ -1996,7 +2083,96 @@ ul li span {
 			</span>
 			<span id='download-android-bottom' class='download coming-soon'>
 				<span>coming soon</span>
-				<a class='content-link'><span class='image'><img src='/resource/google-play-badge.png' alt="WCode number example - comics" /></span></a>
+				<a class='content-link'><span class='image'><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 135 40" xml:space="preserve">
+<g>
+	<rect x="-10" y="-10" fill="#FFFFFF" fill-opacity="0" width="155" height="60"/>
+	<path fill="#6F6F6F" d="M130,40H5c-2.8,0-5-2.3-5-5V5c0-2.8,2.3-5,5-5h125c2.8,0,5,2.3,5,5v30C135,37.7,132.8,40,130,40z"/>
+	<g>
+		<g>
+			<path fill="#A6A6A6" d="M130,0.8c2.3,0,4.2,1.9,4.2,4.2v30c0,2.3-1.9,4.2-4.2,4.2H5c-2.3,0-4.2-1.9-4.2-4.2V5
+				c0-2.3,1.9-4.2,4.2-4.2H130 M130,0H5C2.3,0,0,2.3,0,5v30c0,2.8,2.3,5,5,5h125c2.8,0,5-2.3,5-5V5C135,2.3,132.8,0,130,0L130,0z"/>
+		</g>
+	</g>
+	<g>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" d="M47.4,10.2c0,0.8-0.2,1.5-0.7,2
+			c-0.6,0.6-1.3,0.9-2.2,0.9c-0.9,0-1.6-0.3-2.2-0.9c-0.6-0.6-0.9-1.3-0.9-2.2c0-0.9,0.3-1.6,0.9-2.2c0.6-0.6,1.3-0.9,2.2-0.9
+			c0.4,0,0.8,0.1,1.2,0.3c0.4,0.2,0.7,0.4,0.9,0.7l-0.5,0.5c-0.4-0.5-0.9-0.7-1.6-0.7c-0.6,0-1.2,0.2-1.6,0.7
+			c-0.5,0.4-0.7,1-0.7,1.7s0.2,1.3,0.7,1.7c0.5,0.4,1,0.7,1.6,0.7c0.7,0,1.2-0.2,1.7-0.7c0.3-0.3,0.5-0.7,0.5-1.2h-2.2V9.8h2.9
+			C47.4,9.9,47.4,10.1,47.4,10.2z"/>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" d="M52,7.7h-2.7v1.9h2.5v0.7h-2.5v1.9H52V13
+			h-3.5V7H52V7.7z"/>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" d="M55.3,13h-0.8V7.7h-1.7V7H57v0.7h-1.7V13z"/>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" d="M59.9,13V7h0.8v6H59.9z"/>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" d="M64.1,13h-0.8V7.7h-1.7V7h4.1v0.7h-1.7V13z"
+			/>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" d="M73.6,12.2c-0.6,0.6-1.3,0.9-2.2,0.9
+			c-0.9,0-1.6-0.3-2.2-0.9c-0.6-0.6-0.9-1.3-0.9-2.2s0.3-1.6,0.9-2.2c0.6-0.6,1.3-0.9,2.2-0.9c0.9,0,1.6,0.3,2.2,0.9
+			c0.6,0.6,0.9,1.3,0.9,2.2C74.5,10.9,74.2,11.6,73.6,12.2z M69.8,11.7c0.4,0.4,1,0.7,1.6,0.7c0.6,0,1.2-0.2,1.6-0.7
+			c0.4-0.4,0.7-1,0.7-1.7S73.5,8.7,73,8.3c-0.4-0.4-1-0.7-1.6-0.7c-0.6,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.7,1-0.7,1.7
+			S69.3,11.3,69.8,11.7z"/>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" d="M75.6,13V7h0.9l2.9,4.7h0l0-1.2V7h0.8v6h-0.8
+			l-3.1-4.9h0l0,1.2V13H75.6z"/>
+	</g>
+	<path fill="#FFFFFF" d="M68.1,21.8c-2.4,0-4.3,1.8-4.3,4.3c0,2.4,1.9,4.3,4.3,4.3c2.4,0,4.3-1.8,4.3-4.3
+		C72.4,23.5,70.5,21.8,68.1,21.8z M68.1,28.6c-1.3,0-2.4-1.1-2.4-2.6c0-1.5,1.1-2.6,2.4-2.6c1.3,0,2.4,1,2.4,2.6
+		C70.5,27.5,69.4,28.6,68.1,28.6z M58.8,21.8c-2.4,0-4.3,1.8-4.3,4.3c0,2.4,1.9,4.3,4.3,4.3c2.4,0,4.3-1.8,4.3-4.3
+		C63.1,23.5,61.2,21.8,58.8,21.8z M58.8,28.6c-1.3,0-2.4-1.1-2.4-2.6c0-1.5,1.1-2.6,2.4-2.6c1.3,0,2.4,1,2.4,2.6
+		C61.2,27.5,60.1,28.6,58.8,28.6z M47.7,23.1v1.8h4.3c-0.1,1-0.5,1.8-1,2.3c-0.6,0.6-1.6,1.3-3.3,1.3c-2.7,0-4.7-2.1-4.7-4.8
+		s2.1-4.8,4.7-4.8c1.4,0,2.5,0.6,3.3,1.3l1.3-1.3c-1.1-1-2.5-1.8-4.5-1.8c-3.6,0-6.7,3-6.7,6.6c0,3.6,3.1,6.6,6.7,6.6
+		c2,0,3.4-0.6,4.6-1.9c1.2-1.2,1.6-2.9,1.6-4.2c0-0.4,0-0.8-0.1-1.1H47.7z M93.1,24.5c-0.4-1-1.4-2.7-3.6-2.7c-2.2,0-4,1.7-4,4.3
+		c0,2.4,1.8,4.3,4.2,4.3c1.9,0,3.1-1.2,3.5-1.9l-1.4-1c-0.5,0.7-1.1,1.2-2.1,1.2c-1,0-1.6-0.4-2.1-1.3l5.7-2.4L93.1,24.5z
+		 M87.3,25.9c0-1.6,1.3-2.5,2.2-2.5c0.7,0,1.4,0.4,1.6,0.9L87.3,25.9z M82.6,30h1.9V17.5h-1.9V30z M79.6,22.7L79.6,22.7
+		c-0.5-0.5-1.3-1-2.3-1c-2.1,0-4.1,1.9-4.1,4.3c0,2.4,1.9,4.2,4.1,4.2c1,0,1.8-0.5,2.2-1h0.1v0.6c0,1.6-0.9,2.5-2.3,2.5
+		c-1.1,0-1.9-0.8-2.1-1.5l-1.6,0.7c0.5,1.1,1.7,2.5,3.8,2.5c2.2,0,4-1.3,4-4.4V22h-1.8V22.7z M77.4,28.6c-1.3,0-2.4-1.1-2.4-2.6
+		c0-1.5,1.1-2.6,2.4-2.6c1.3,0,2.3,1.1,2.3,2.6C79.7,27.5,78.7,28.6,77.4,28.6z M101.8,17.5h-4.5V30h1.9v-4.7h2.6
+		c2.1,0,4.1-1.5,4.1-3.9S103.9,17.5,101.8,17.5z M101.9,23.5h-2.7v-4.3h2.7c1.4,0,2.2,1.2,2.2,2.1C104,22.4,103.2,23.5,101.9,23.5z
+		 M113.4,21.7c-1.4,0-2.8,0.6-3.3,1.9l1.7,0.7c0.4-0.7,1-0.9,1.7-0.9c1,0,1.9,0.6,2,1.6v0.1c-0.3-0.2-1.1-0.5-1.9-0.5
+		c-1.8,0-3.6,1-3.6,2.8c0,1.7,1.5,2.8,3.1,2.8c1.3,0,1.9-0.6,2.4-1.2h0.1v1h1.8v-4.8C117.2,23,115.5,21.7,113.4,21.7z M113.2,28.6
+		c-0.6,0-1.5-0.3-1.5-1.1c0-1,1.1-1.3,2-1.3c0.8,0,1.2,0.2,1.7,0.4C115.2,27.8,114.2,28.6,113.2,28.6z M123.7,22l-2.1,5.4h-0.1
+		l-2.2-5.4h-2l3.3,7.6l-1.9,4.2h1.9l5.1-11.8H123.7z M106.9,30h1.9V17.5h-1.9V30z"/>
+	<g>
+		<path fill="#00D4FF" d="M10.4,7.5C10.1,7.8,10,8.3,10,8.9v22.1c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1l12.4-12.4V20v-0.1L10.4,7.5
+			L10.4,7.5z"/>
+		<g>
+			
+				<image width="18" height="9" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD1JREFUeNpiZKAMGMMYjJQaAARn
+yTEIwwByXITTEGINwmsAMQYRZQA+g0gyAJdBZBkCM8gYTewsOekBIMAAffwIPeAtbKUAAAAASUVO
+RK5CYII=" transform="matrix(1 0 0 1 9.9999 23.9999)">
+			</image>
+			
+				<image width="2" height="3" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAYAAAC56t6BAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpiZGBgkAdiBiYGNCAP
+EGAAA0IAQojEsPMAAAAASUVORK5CYII=" transform="matrix(1 0 0 1 8.9999 29.9999)">
+			</image>
+		</g>
+		
+			<image width="7" height="5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAFCAYAAACJmvbYAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZMAO5EEEIzZBKHjI
+iEsCphNDEJdRKAAgwADZMQNDvDcJHgAAAABJRU5ErkJggg==" transform="matrix(1 0 0 1 26.9999 19.9999)">
+		</image>
+		
+			<image width="25" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAOCAYAAADaOrdAAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGdJREFUeNq01EEKwCAMRNH8nqxH
+783SboQgIkmczkow+Iyo2Bd3vy0EeEwYBjAWjqAKu+bF4njusN3JblLVFZmiU4xKcRejuqsORPec
+KxinNyeDoXpwOwwTZ4XJkRX0C6L+MVLQK8AADrI7TBvgHu8AAAAASUVORK5CYII=" transform="matrix(1 0 0 1 8.9999 6.9999)">
+		</image>
+	</g>
+</g>
+<path fill="#FFFFFF" d="M10.2,7.2c0.2,0,0.3,0.2,0.4,0.3c2.5,2.5,10.6,10.8,12.2,12.4c0.3,0.3,0.3,0.4,0,0.7c-4,4-7.9,7.9-11.9,11.9
+	c-0.4,0.4-0.7,0.4-1.1-0.1c-0.2-0.3-0.3-0.6-0.3-0.9c0-7.7,0-15.5,0-23.3c0-0.3,0.1-0.6,0.3-0.9C10,7.4,10.1,7.3,10.2,7.2z"/>
+<path fill="#FFFFFF" d="M11.4,6.9c1.1,0.6,1.7,1,2.6,1.4c4.4,2.4,8.7,4.9,13.1,7.3c0.6,0.3,0.6,0.3,0.1,0.8c-1,1-2,2-3,3
+	c-0.3,0.3-0.4,0.3-0.7,0c-4-4-8.1-8.1-12.1-12.3c0,0-0.1-0.1-0.1-0.1C11.3,7,11.2,6.8,11.4,6.9z"/>
+<path fill="#FFFFFF" d="M33.9,20.1c0,0.6-0.4,0.9-0.9,1.2c-1.2,0.7-3.8,2.1-3.9,2.2C28,24,28,24,27.2,23.1c-0.8-0.8-1.5-1.6-2.3-2.4
+	c-0.2-0.2-0.2-0.4,0-0.6c1.1-1.1,2.3-2.3,3.4-3.4c0.2-0.2,0.4-0.3,0.7-0.1c1.4,0.8,2.7,1.6,4.1,2.4C33.4,19.2,33.8,19.5,33.9,20.1z"
+	/>
+<path fill="#FFFFFF" d="M12.9,32.1c0-0.2,0.2-0.3,0.3-0.4c3.4-3.4,6.8-6.8,10.2-10.2c0.3-0.3,0.6-0.4,0.9,0c0.8,0.9,1.7,1.7,2.5,2.5
+	c0.3,0.3,0.3,0.4-0.1,0.7c-4.4,2.4-8.9,4.9-13.3,7.3C13.3,32.1,13.2,32.2,12.9,32.1z"/>
+</svg>
+</span></a>
 			</span>
 			<span id='download-apple-bottom' class='download coming-soon'>
 				<span>to be announced</span>
