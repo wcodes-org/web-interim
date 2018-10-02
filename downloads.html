@@ -5,7 +5,7 @@
 	<meta http-equiv='Content-Type' content="text/html; charset=UTF-8" >
 	<meta name='title' content="WCodes" >
 	<meta name='author' content="Ujjwal Singh" >
-	<meta name='viewport' content="width=device-width, initial-scale=1.0" >
+	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
 	<meta itemprop="name" content="WCodes" />
 <meta itemprop="description" content="Download WCode binaries" />
 <meta itemprop="image" content="https://wcodes.org/social.png" />
@@ -59,7 +59,7 @@ var trackOutboundLink = function(title, url) {
 }
 
 </script>
-		<script src='https://browser.sentry-cdn.com/3.22.2/bundle.min.js' crossorigin='anonymous'
+		<script src='https://browser.sentry-cdn.com/4.0.6/bundle.min.js' crossorigin='anonymous'
 ></script>
 		<script>Sentry.init({ dsn: 'https://09aac7815d724fd7b1016b19255ffb72@sentry.io/187154' });
 </script>
@@ -148,7 +148,9 @@ blockquote {
 #message {
 	padding: 0 6px 18px;
 	clear: both;
-	overflow: hidden
+	overflow: hidden;
+	padding-left: env(safe-area-inset-left);
+	padding-right: env(safe-area-inset-right);
 }
 /* 
 .content ol {
