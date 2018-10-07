@@ -588,7 +588,7 @@ body {
 	margin: 18px 20px
 }
 
-.social>a>span {
+.social .image {
 	background-size: contain;
 	width: 34px;
 	height: 34px;
@@ -596,11 +596,11 @@ body {
 	background-repeat: no-repeat;
 }
 
-.social>a>span path {
+.social .image path {
 	transition: all ease-out 0.3s
 }
 
-#site-twitter:hover path, #site-facebook:hover path, #site-gplus:hover span>svg>path, #site-youtube:hover #lozenge path {
+#site-twitter:hover path, #site-facebook:hover path, #site-gplus:hover .image>svg>path, #site-youtube:hover #lozenge path {
 	fill: #56b4d1
 }
 #header-logo {
@@ -643,13 +643,13 @@ body {
 	visibility: hidden
 }
 
-span#header_buttons_right {
+#header_buttons_right {
 	margin: 0;
 	float: right;
 	text-align: right
 }
 
-span#header-logo-image {
+#header-logo-image {
 	height: 50px;
 	width: 144px;
 	background-size: contain
@@ -660,8 +660,7 @@ span#header-logo-image {
 	text-align: center
 }
 
-span.header-logo {
-	width: 153px;
+.header-logo {
 	display: inline-block
 }
 
@@ -905,7 +904,7 @@ span.header-logo {
 	}
 
 	#content p {
-		padding-left: 5px
+		padding-left: 6px
 	}
 
 	#nav-list {
@@ -922,10 +921,6 @@ span.header-logo {
 	
 	#fb_components {
 		margin-left: 4px!important
-	}
-
-	#home-message > span {
-		padding-left: 5px
 	}
 
 	#home-menu {
@@ -1819,8 +1814,8 @@ ul li span {
 		</a>
 	</div>
 	<div class='XURL' data-target='root' id='header-logo'>
-		<a id='header-logo-href' href='/'>
-			<span id='header-logo-image' class='header-logo image'><svg version="1.1"
+		<a id='header-logo-image' href='/' class='header-logo image'>
+			<svg version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-55 -18 306 100"
 	 enable-background="new -55 -18 306 100" xml:space="preserve">
 	<g id="flowRoot2982" transform="matrix(0.2476154,0,0,0.2476154,3.0703645,-26.736306)">
@@ -1870,7 +1865,6 @@ ul li span {
 		</g>
 	</g>
 </svg>
-</span>
 		</a>
 	</div>
 	</div>
@@ -2109,7 +2103,7 @@ ul li span {
 		<div id='updated'>
 			Updated:
 			<span id='date'>
-				2018 Sep 29			</span>
+				2018 Oct 07			</span>
 		</div>
 	</div>
 	<div class='shadow-scroll-bottom'></div>
