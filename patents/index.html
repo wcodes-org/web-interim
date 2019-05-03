@@ -121,6 +121,13 @@ h1 {
 img {
 	max-width: 100%;
 }
+@media (max-width: 540px) {
+	h1, h2, h3, h4, h5, h6 {
+		padding-left: 5px;
+		padding-right: 5px
+	}
+
+}
 pre {
 	font-family: monospace
 }
@@ -184,14 +191,23 @@ blockquote {
 	height: 0
 }
 .cover-image img {
+	width: 100%;
 	border-radius: 8px
 }
 
 .cover-image {
 	height: 0;
+	margin: 0px 2px 1px 2px;
 	border-radius: 8px;
-	-webkit-box-shadow: 0 1px 10px #afafaf;
-	-moz-box-shadow: 0 1px 10px #afafaf
+	background: #DDDDDD;
+	box-shadow: 0 1px 10px #C7C7C7
+}
+@media (max-width: 540px) {
+
+	.cover-image {
+		margin-right: 3px
+	}
+
 }
 .indent-10 {
 	padding-left: 10px;
@@ -757,7 +773,7 @@ body {
 	height: 32px;
 	margin-top: -5px;
 	overflow: hidden;
-	
+
 	border-style: solid;
 	border-width: 1px;
 	border-top-color: white;
@@ -765,9 +781,9 @@ body {
 	border-bottom-right-radius: 4px;
 
 	color: #69b7cf;
-	background-color: white;
-	border-color: #eee;
-	
+	background-color: #f6f6f6;
+	border-color: #f4f4f4;
+
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
@@ -801,10 +817,10 @@ body {
 	border-width: 1px;
 	border-radius: 5px;
 
-	background: white;
-	border-color: #ddd;
+	background: #f6f6f6;
+	border-color: #f4f4f4;
 	color: #69b7cf;
-	
+
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
@@ -815,7 +831,7 @@ body {
 
 .item_block div, .item_block_text div {
 	margin-left: 28px;
-	font-size: 0.9375em;
+	font-size: 1em;
 	vertical-align: middle;
 	cursor: pointer;
 	color: #69b7cf;
@@ -887,7 +903,7 @@ body {
 }
 
 @media (max-width: 540px) {
-	
+
 	#main-wrapper {
 		padding:0!important
 	}
@@ -905,21 +921,22 @@ body {
 	}
 
 	#content p {
-		padding-left: 6px
+		padding-left: 6px;
+		padding-right: 6px
 	}
 
 	#nav-list {
 		max-width: 354px;
 	}
-	
+
 	#nav-list.page-list > .item_block_container {
 		margin: 10px 6px;
 	}
-	
+
 	.item_block-disabled {
 		display: none;
 	}
-	
+
 	#fb_components {
 		margin-left: 4px!important
 	}
@@ -931,7 +948,7 @@ body {
 	#home-menu > div.sidebar-nav-group {
 		padding-left: 12px!important
 	}
-	
+
 }
 
 @media (max-width: 768px) {
@@ -1242,7 +1259,12 @@ span.download-android {
 	border-spacing: 8px 2px
 }
 .voice-com-table {
+	padding-left: 4px;
 	border-spacing: 20px 8px
+}
+
+.voice-com-table th {
+	text-align: left
 }
 .pending {
 	color: #ccc!important
@@ -1327,7 +1349,7 @@ span#bar-code, span#qr-code {
 }
 
 .alt_div_shade > div {
-	padding-left: 6px;	
+	padding-left: 6px;
 }
 
 .alt_div_shade > div:nth-child(odd) {
@@ -1365,7 +1387,7 @@ summary::-webkit-details-marker {
 }
 
 .example_connector {
-	color: #AAA;
+	color: #DDD;
 }
 
 .example_wcode {
@@ -1943,7 +1965,7 @@ ul li span {
 								<div id='canvas-main'>
 									<div id='content'>
 										<div id='message'>
-	
+
 	<h2>History</h2>
 	<p>
 		I had invented and published the method and apparatus of transforming digital data into a sequence of literal words on my website <a class='content-link XURL' data-target='root' href='/'>wcodes.org</a> in late <a class='content-link' href='https://web.archive.org/web/20121019012050/wcodes.org'>2012 (Web archive snapshots available)</a>.
@@ -2007,7 +2029,7 @@ ul li span {
 	</div>
 </div>
 	</div>
-	
+
 	<h2>Conflict</h2>
 	<p>
 		A few years later I found out that a startup named “<strong><em>What3Words</em></strong>” in UK had applied for a patent on the same invention, with the only apparant difference being that their code is shorter with only 3 words while WCode had 5; But the disparity was primarily because WCode used a dictionary of only <strong class='blue'>1024</strong> simple words against the many thousands.<br>
@@ -2033,7 +2055,7 @@ ul li span {
 	<p>
 		However, sadly, it turns that on January 30th, 2018, patent <a class='content-link' href='https://patents.google.com/patent/US9883333B2/en'>US9883333B2</a> was granted.
 	</p>
-	
+
 	<h2>Links</h2>
 	<p class="indent-40 top-bottom-gap">
 		[1] : <a class='content-link' href='https://wiki.openstreetmap.org/wiki/What3words'>OpenStreetMap : wiki - What3words</a>
@@ -2041,7 +2063,19 @@ ul li span {
 	<p class='disclaimer'>
 		Disclaimer:  All product names, trademarks and registered trademarks are property of their respective owners.
 	</p>
-	
+
+</div>
+<div class='center' id='content-body-separator'></div>
+<div id='nav-list' class='center page-list'>
+	<a id='nav-menu-prev'
+			class='XURL item_block_container' href='/media' data-target='media' data-title='Media' >
+		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' alt='Navigation - previous page tile'><div class='item_block_text'><div class='arrow'>&#x25C4;</div><div>Media</div></div>
+		</a><a id='nav-menu-next'
+			class='XURL item_block_container' href='/pitch' data-target='pitch' data-title='Pitch' >
+		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' alt='Navigation - next page tile'><div class='item_block_text'><div>Pitch</div><div class='arrow'>&#x25BA;</div></div>
+	</a><a id='nav-menu-up' class='XURL item_block_container center-arrow' href='/' data-target='root' data-title='WCode'>
+		<img class='item_block_image item_block_image_hidden' src='/root.svg ' alt='Navigation - up level tile'><div class='item_block_text'><div></div><div class='arrow'>&#x25B2;</div></div>
+	</a>
 </div>
 									</div>
 								</div>
@@ -2057,7 +2091,7 @@ ul li span {
 		<div id='updated'>
 			Updated:
 			<span id='date'>
-				2018 May 19			</span>
+				2019 May 03			</span>
 		</div>
 	</div>
 	<div class='shadow-scroll-bottom'></div>
@@ -2290,16 +2324,18 @@ ul li span {
 </span></a>
 			</span>
 			<span class='social grow'>
-				<a href='https://plus.google.com/+wcodesorg' id='site-gplus' onclick="trackOutboundLink('wcodes-gplus', 'https://plus.google.com/+wcodes.org'); return false;"><span class='image'><svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
-	 viewBox="0 0 76 76">
-	<path fill='#D9D9D9' d="M67.5,72.5h-59c-2.8,0-5-2.3-5-5v-59c0-2.8,2.3-5,5-5h59c2.8,0,5,2.3,5,5v59C72.5,70.3,70.3,72.5,67.5,72.5z
-		" />
-	<g>
-		<path fill='#FFFFFF' d="M28.4,21.2c-9.3,0-16.8,7.5-16.8,16.8s7.5,16.8,16.8,16.8c9.7,0,16.1-6.8,16.1-16.4c0-1.1-0.1-1.9-0.3-2.8
-			H28.4v5.8h9.5c-0.4,2.5-2.9,7.2-9.5,7.2C22.7,48.6,18,43.8,18,38s4.7-10.6,10.4-10.6c3.3,0,5.4,1.4,6.7,2.6l4.6-4.4
-			C36.7,22.9,32.9,21.2,28.4,21.2" />
-		<polyline fill='#FFFFFF' points="59.6,30.8 54.8,30.8 54.8,35.6 50,35.6 50,40.4 54.8,40.4 54.8,45.2 59.6,45.2 59.6,40.4 
-			64.4,40.4 64.4,35.6 59.6,35.6 59.6,30.8 	" />
+				<a href='https://www.youtube.com/channel/UCnKSws8Lro8U9Ewtf1Xi5jg' id='site-youtube' onclick="trackOutboundLink('wcodes-youtube', 'https://www.youtube.com/channel/UCnKSws8Lro8U9Ewtf1Xi5jg'); return false;"><span class='image'><svg id='youtube_icon' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
+	 viewBox="0 -158 1024 1024">
+	<path fill='#FFFFFF' d="M407,493l276-143L407,206V493z" />
+	<path fill='#D9D9D9' d="M407,206l242,161.6l34-17.6L407,206z" />
+	<g id='lozenge'>
+		<g>
+			<path fill='#D9D9D9' d="M1013,156.3c0,0-10-70.4-40.6-101.4C933.6,14.2,890,14,870.1,11.6C727.1,1.3,512.7,1.3,512.7,1.3h-0.4
+				c0,0-214.4,0-357.4,10.3C135,14,91.4,14.2,52.6,54.9C22,85.9,12,156.3,12,156.3S1.8,238.9,1.8,321.6v77.5
+				C1.8,481.8,12,564.4,12,564.4s10,70.4,40.6,101.4c38.9,40.7,89.9,39.4,112.6,43.7c81.7,7.8,347.3,10.3,347.3,10.3
+				s214.6-0.3,357.6-10.7c20-2.4,63.5-2.6,102.3-43.3c30.6-31,40.6-101.4,40.6-101.4s10.2-82.7,10.2-165.3v-77.5
+				C1023.2,238.9,1013,156.3,1013,156.3z M407,493l0-287l276,144L407,493z" />
+		</g>
 	</g>
 </svg>
 </span></a>
