@@ -93,6 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	var PROJECT_TITLE = 'WCodes';
 </script>
 	<style>
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Condensed', Abel, sans-serif;
+}
+
 h1, h3 {
 	color: #69b7cf !important;
 }
@@ -514,7 +518,7 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 	height: 100%;
-	font-family: Abel,Arial,Verdana,sans-serif;
+	font-family: Abel,'Roboto Condensed',Arial,Verdana,sans-serif;
 	color: #5a5a5a;
 }
 
@@ -572,7 +576,7 @@ body {
 }
 
 .grow:hover {
-	transform: scale(1.1);	
+	transform: scale(1.1);
 }
 @media (max-width: 540px) {
 	html {
@@ -585,6 +589,16 @@ body {
 	font-weight: 400;
 	src: local('Abel'), local('Abel-Regular'), url(//fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), local('sans-serif-condensed'), url(https://fonts.gstatic.com/s/robotocondensed/v17/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 #footer-wrapper-divider {
 	border-bottom: 1px solid #ddd;
@@ -1381,6 +1395,7 @@ span#bar-code, span#qr-code {
 	padding-top: 20px;
 	padding-bottom: 28px;
 	background: linear-gradient(to right, #f2f2f2 20%, white);
+	border-radius: 8px
 }
 
 .alt_div_shade > div > h2 {
