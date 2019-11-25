@@ -133,7 +133,6 @@ function loadCanvasH(e) {
 function loadCanvas(target, title) {
 
 	curTab = target;
-	var date = document.getElementById('updated');
 	var canvas_main = document.getElementById('canvas-main');
 	var main_wrapper = document.getElementById('main-wrapper');
 
@@ -181,13 +180,11 @@ function loadCanvas(target, title) {
 					syncScrollReload(startTime, resp, target);
 				} break;
 				case 404: {
-					document.getElementById('date').innerHTML = '';
 					canvas_main.innerHTML = "Error: 404 - Resource not found!";
 				} break;
 				case 408:
 				case 501:
 				case 502: {
-					document.getElementById('date').innerHTML = '';
 					canvas_main.innerHTML = 'Error!';
 					errorLoading();
 				}
@@ -240,7 +237,6 @@ function executeReload(startTime, resp, target) {
 	reloadTimeout = setTimeout( function() {
 		document.getElementById('content').innerHTML = resp.content;
 		document.getElementById('canvas-main').classList.remove('hide');
-		document.getElementById('date').innerHTML = resp.date;
 		if(!URLid == '') {
 			document.getElementById('main-wrapper').classList.remove('hide_path_title_updated');
 		}
@@ -499,9 +495,11 @@ function loadWordlistBlack(blackList) {
 	var lines = blackList.split("\n");
 	var obj = [];
 	for(var i = 1; i < lines.length; i++) {
-		var currentline = lines[i].split("\t");
-		if(currentline[3].length > 0)
-			obj.push(currentline[3]);
+		if(lines[i].length) {
+			var currentline = lines[i].split("\t");
+				if(currentline[3].length > 0)
+					obj.push(currentline[3]);
+		}
 	}
 	wordListBlack['Discarded'] = [];
 	wordListBlack['Discarded']['*'] = obj;
@@ -595,8 +593,10 @@ var bSearch_selected = false;
 
 function execSearch(event) {
 	var input = word_search_box.value.toLowerCase();
-	if(input.length == 0)
+	if(input.length == 0) {
 		document.getElementById('search_input_clear').classList.add('hide');
+		clearWordListSearch();
+	}
 	else if(input[input.length-1] == ' ') {
 		if(!bSearch_selected) {
 			word_search_box.value = input.substring(0, input.length-1);
@@ -612,10 +612,10 @@ function execSearch(event) {
 	else {
 		document.getElementById('search_input_clear').classList.remove('hide');
 		bSearch_selected = false;
+		setWordList(input, true);
+		document.getElementById('wordlist-table-separator').classList.remove('hide');
+		setWordList(input, false);
 	}
-	setWordList(input, true);
-	document.getElementById('wordlist-table-separator').classList.remove('hide');
-	setWordList(input, false);
 };
 
 function matchWord(list, input) {
@@ -627,4 +627,3 @@ function matchWord(list, input) {
 		}
 	});
 }
-

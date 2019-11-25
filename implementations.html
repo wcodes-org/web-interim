@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge' >
 	<meta http-equiv='Content-Type' content="text/html; charset=UTF-8" >
-	<meta name='title' content="WCodes" >
+	<meta name='title' content="Platforms for which implementations of WCode is available or proposed - WCodes" >
 	<meta name='author' content="Ujjwal Singh" >
 	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
 	<meta name='format-detection' content='telephone=no'>
@@ -11,7 +11,7 @@
 <meta itemprop="description" content="Platforms for which implementations of WCode is available or proposed" />
 <meta itemprop="image" content="https://wcodes.org/social.png" />
 	<meta property="og:url" content="https://wcodes.org/implementations" />
-<meta property="og:title" content="Implementations" />
+<meta property="og:title" content="WCode Implementations" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://wcodes.org/social.png" />
 <meta property="og:description" content="Platforms for which implementations of WCode is available or proposed" />
@@ -20,7 +20,7 @@
 <meta property="fb:admins" content="100000014591845" />
 	<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@wcodesorg">
-<meta name="twitter:title" content="Implementations">
+<meta name="twitter:title" content="WCode Implementations">
 <meta name="twitter:description" content="Platforms for which implementations of WCode is available or proposed">
 <meta name="twitter:image" content="https://wcodes.org/social.png">
 <meta name="twitter:creator" content="wcodesorg.jpg">
@@ -60,7 +60,7 @@ var trackOutboundLink = function(title, url) {
 }
 
 </script>
-		<script src='https://browser.sentry-cdn.com/4.0.6/bundle.min.js' crossorigin='anonymous'
+		<script src='https://browser.sentry-cdn.com/5.7.0/bundle.min.js' crossorigin='anonymous'
 ></script>
 		<script>Sentry.init({ dsn: 'https://09aac7815d724fd7b1016b19255ffb72@sentry.io/187154' });
 </script>
@@ -125,12 +125,75 @@ h1 {
 img {
 	max-width: 100%;
 }
+
+#message.alt_div_shade {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.alt_div_shade > div, .odd_shade, .even_shade {
+	padding-left: 6px;
+}
+
+.odd_shade, .alt_div_shade > div:nth-child(odd) {
+	padding-top: 0px;
+	padding-bottom: 28px;
+}
+
+.even_shade, .alt_div_shade > div:nth-child(even) {
+	padding-top: 20px;
+	padding-bottom: 28px;
+	background: linear-gradient(to right, #f2f2f2 20%, white);
+	border-radius: 8px
+}
+
+.alt_div_shade > div > h2, .odd_shade > h2, .even_shade > h2 {
+	padding-left: 16px;
+}
+
+.message_left_div {
+	display: inline-block;
+	width: 80%;
+	float: left;
+	margin-left: 0%
+}
+
+.message_right_div {
+	width: 80%;
+	display: inline-block;
+	float: right;
+	margin-right: 0%
+}
+
+.message_center_div {
+	width: 80%
+	display: inline-block;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#message > *, #nav-menu_container, #fb_components {
+	margin-left: 10%;
+	width: 80%
+}
+
+.google-auto-placed {
+	margin: 0 !important;
+	width: 100% !important
+}
 @media (max-width: 540px) {
+	
 	h1, h2, h3, h4, h5, h6 {
 		padding-left: 5px;
 		padding-right: 5px
 	}
 
+	.message_left_div, .message_right_div, .message_center_div, #message > *, #nav-menu_container, #fb_components {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto
+	}
+	
 }
 pre {
 	font-family: monospace
@@ -212,6 +275,12 @@ blockquote {
 		margin-right: 3px
 	}
 
+}
+@media (max-width: 540px) {
+	#fb_components {
+		padding-left: 2px;
+		padding-right: 2px
+	}
 }
 .indent-a {
 	padding-left: 10px;
@@ -314,14 +383,14 @@ ul.content-list-2, ol.content-list-2 {
 	padding-top: 12px;
 	padding-bottom: 12px;
 }
-
 #fb_components {
-    margin-left: 20px
+	padding-left: 10px;
+	padding-right: 10px
 }
 
 #fb_components .fb-like {
-    padding: 16px 0 10px 10px;
-    vertical-align: top
+	padding: 16px 0 10px 10px;
+	vertical-align: top
 }
 #nav-list {
 	padding: 26px 0 36px;
@@ -340,7 +409,12 @@ ul.content-list-2, ol.content-list-2 {
 }
 
 #nav-menu-prev {
-	float: left;
+	float: left
+}
+
+#nav-menu-prev > .item_block_text > div {
+	margin-left: 12px;
+	margin-right: 0
 }
 
 #nav-menu-next {
@@ -353,7 +427,7 @@ ul.content-list-2, ol.content-list-2 {
 
 #nav-menu-next > .item_block_text > div {
 	margin-left: 0px;
-	margin-right: 28px;
+	margin-right: 12px
 }
 
 .path-separator {
@@ -528,9 +602,10 @@ body {
 }
 
 .center {
+	display: block !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
-	text-align: center !important;
+	text-align: center !important
 }
 
 .no-margin {
@@ -611,7 +686,7 @@ body {
 	font-size: 0.875em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -215px;
+	margin-top: -230px;
 	position: relative
 }
 
@@ -730,7 +805,7 @@ body {
 	margin-bottom: -4px
 }
 #menu-button {
-	margin: 13px 0 0 82px;
+	margin: 13px 0 0 54px;
 	display: inline-block;
 	float: left;
 	background-size: contain;
@@ -1004,7 +1079,7 @@ body {
 	z-index: 1;
 	overflow: hidden;
 	width: 50%;
-	transform: translateX(-932px);
+	transform: translateX(-100%);
 	display: inline-block;
 	float: left;
 	transition: all 0.7s;
@@ -1070,7 +1145,6 @@ body {
 
 #wrapper {
 	margin: 0 auto;
-	max-width: 932px;
 	padding-bottom: 192px
 }
 
@@ -1081,7 +1155,7 @@ body {
 }
 
 #canvas-wrapper-inner-container {
-	max-width: 1868px;
+	max-width: 2880px;
 	width: 200%;
 }
 
@@ -1276,7 +1350,6 @@ span.download-android {
 	font-size: smaller;
 }
 #feedback-contact-table {
-	margin: 6px 0 8px 16px;
 	border-spacing: 8px 2px
 }
 .voice-com-table {
@@ -1300,6 +1373,39 @@ span.download-android {
 }
 .image-desc {
 	padding-left: 40px
+}
+#locaiton_appendix_list > li > span {
+	display: inline-block
+}
+
+#locaiton_appendix_list {
+	list-style: none
+}
+
+#locaiton_appendix_list li {
+	margin-left: 35px;
+	position: relative;
+	margin-bottom: 0.25em
+}
+
+#locaiton_appendix_list li:nth-child(n):before {
+	position: absolute;
+	left: -1em
+}
+
+#locaiton_appendix_list li:nth-child(1):before {
+	content: '\2013'
+}
+#locaiton_appendix_list li:nth-child(2):before {
+	content: '*'
+}
+
+#locaiton_appendix_list li:nth-child(3):before {
+	content: '^'
+}
+
+#location_app_demo_map {
+	margin-top: 12px
 }
 .code_label {
 	text-align: center;
@@ -1378,31 +1484,6 @@ span#bar-code, span#qr-code {
 	color: #A9A9A9
 }
 
-#message.alt_div_shade {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-
-.alt_div_shade > div {
-	padding-left: 6px;
-}
-
-.alt_div_shade > div:nth-child(odd) {
-	padding-top: 0px;
-	padding-bottom: 28px;
-}
-
-.alt_div_shade > div:nth-child(even) {
-	padding-top: 20px;
-	padding-bottom: 28px;
-	background: linear-gradient(to right, #f2f2f2 20%, white);
-	border-radius: 8px
-}
-
-.alt_div_shade > div > h2 {
-	padding-left: 16px;
-}
-
 summary::-webkit-details-marker {
 	color: #ddd
 }
@@ -1440,6 +1521,10 @@ summary::-webkit-details-marker {
 
 #how_message {
 	padding-left: 84px;
+}
+
+#apps {
+	background: linear-gradient(to right, #fAfAfA 20%, white)
 }
 @media (max-width: 540px) {
 
@@ -1663,11 +1748,14 @@ summary::-webkit-details-marker {
 	width: 84px;
 	font-weight: bold
 }
+.video-container {
+	margin-top: 18px;
+	margin-bottom: 24px
+}
+
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-  margin-right: 18px;
 	height: 0;
 }
 
@@ -1760,8 +1848,12 @@ summary::-webkit-details-marker {
 	margin-bottom: 12px;
 }
 
-#wordlist-table-white > div:last-child * {
+#wordlist-table-white > div:nth-last-child(2) * {
 	color: #aaa !important;
+}
+
+#wordlist-table-white > div:last-child * {
+	color: #93b04b !important;
 }
 
 #wordlist-table-black span {
@@ -1995,14 +2087,14 @@ ul li span {
 							<div id='title-container' class=""><h1 id='title'>Implementations</h1></div>
 							<div id='canvas-wrapper-inner-container'>
 								<div id='nav-menu'>
-	<div class='nav-menu_container'>
+	<div id='nav-menu_container'>
 		<div class='sidebar-nav-li sidebar-sub'>
 <div class='sidebar-nav-group page-list'>
-<a class='XURL item_block' href='/' data-target='root' data-title=''><div>home</div></a><a class='XURL item_block' href='/video' data-target='video' data-title='Video'><div>Video</div></a><a class='XURL item_block' href='/downloads' data-target='downloads' data-title='Downloads'><div>Downloads</div></a><a class='XURL item_block' href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a><a class='XURL item_block' href='/in_pictures' data-target='in_pictures' data-title='In pictures'><div>In pictures</div></a><a class='XURL item_block' href='/pitch' data-target='pitch' data-title='Pitch'><div>Pitch</div></a><a class='XURL item_block' href='/use_cases' data-target='use_cases' data-title='Use cases'><div>Use cases</div></a><a class='XURL item_block' href='/applications' data-target='applications' data-title='Applications'><div>Applications</div></a><a class='XURL item_block' href='/about' data-target='about' data-title='About'><div>About</div></a><a class='XURL item_block' href='/patents' data-target='patents' data-title='Patents'><div>Patents</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<a class='XURL item_block' href='/' data-target='root' data-title=''><div>home</div></a><a class='XURL item_block' href='/location' data-target='location' data-title='Location'><div>Location</div></a><a class='XURL item_block' href='/video' data-target='video' data-title='Video'><div>Video</div></a><a class='XURL item_block' href='/downloads' data-target='downloads' data-title='Downloads'><div>Downloads</div></a><a class='XURL item_block' href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a><a class='XURL item_block' href='/in_pictures' data-target='in_pictures' data-title='In pictures'><div>In pictures</div></a><a class='XURL item_block' href='/pitch' data-target='pitch' data-title='Pitch'><div>Pitch</div></a><a class='XURL item_block' href='/use_cases' data-target='use_cases' data-title='Use cases'><div>Use cases</div></a><a class='XURL item_block' href='/applications' data-target='applications' data-title='Applications'><div>Applications</div></a><a class='XURL item_block' href='/about' data-target='about' data-title='About'><div>About</div></a><a class='XURL item_block' href='/patents' data-target='patents' data-title='Patents'><div>Patents</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
-<a class='XURL item_block' href='/adoption' data-target='adoption' data-title='Adoption'><div>Adoption</div></a><a class='XURL item_block' href='/bug_report' data-target='bug_report' data-title='Bug report'><div>Bug report</div></a><a class='XURL item_block' href='/changelog' data-target='changelog' data-title='Changelog'><div>Changelog</div></a><a class='XURL item_block' href='/comparison' data-target='comparison' data-title='Comparison'><div>Comparison</div></a><a class='XURL item_block' href='/data_set' data-target='data_set' data-title='Data set'><div>Data set</div></a><a class='XURL item_block' href='/features' data-target='features' data-title='Features'><div>Features</div></a><a class='XURL item_block' href='/feedback' data-target='feedback' data-title='Feedback'><div>Feedback</div></a><a class='XURL item_block' href='/guidelines' data-target='guidelines' data-title='Guidelines'><div>Guidelines</div></a><a class='XURL item_block' href='/implementations' data-target='implementations' data-title='Implementations'><div>Implementations</div></a><a class='XURL item_block' href='/license' data-target='license' data-title='License'><div>License</div></a><a class='XURL item_block' href='/logo' data-target='logo' data-title='Logo'><div>Logo</div></a><a class='XURL item_block' href='/presentation' data-target='presentation' data-title='Presentation'><div>Presentation</div></a><a class='XURL item_block' href='/roadmap' data-target='roadmap' data-title='Roadmap'><div>Roadmap</div></a><a class='XURL item_block' href='/source_code' data-target='source_code' data-title='Source code'><div>Source code</div></a><a class='XURL item_block' href='/technology' data-target='technology' data-title='Technology'><div>Technology</div></a><a class='XURL item_block' href='/timeline' data-target='timeline' data-title='Timeline'><div>Timeline</div></a><a class='XURL item_block' href='/user_guide' data-target='user_guide' data-title='User guide'><div>User guide</div></a><a class='XURL item_block' href='/wordlist' data-target='wordlist' data-title='WordList'><div>WordList</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<a class='XURL item_block' href='/adoption' data-target='adoption' data-title='Adoption'><div>Adoption</div></a><a class='XURL item_block' href='/bug_report' data-target='bug_report' data-title='Bug report'><div>Bug report</div></a><a class='XURL item_block' href='/changelog' data-target='changelog' data-title='Changelog'><div>Changelog</div></a><a class='XURL item_block' href='/comparison' data-target='comparison' data-title='Comparison'><div>Comparison</div></a><a class='XURL item_block' href='/data_set' data-target='data_set' data-title='Data set'><div>Data set</div></a><a class='XURL item_block' href='/features' data-target='features' data-title='Features'><div>Features</div></a><a class='XURL item_block' href='/feedback' data-target='feedback' data-title='Feedback'><div>Feedback</div></a><a class='XURL item_block' href='/guidelines' data-target='guidelines' data-title='Guidelines'><div>Guidelines</div></a><a class='XURL item_block' href='/implementations' data-target='implementations' data-title='Implementations'><div>Implementations</div></a><a class='XURL item_block' href='/license' data-target='license' data-title='License'><div>License</div></a><a class='XURL item_block' href='/logo' data-target='logo' data-title='Logo'><div>Logo</div></a><a class='XURL item_block' href='/presentation' data-target='presentation' data-title='Presentation'><div>Presentation</div></a><a class='XURL item_block' href='/roadmap' data-target='roadmap' data-title='Roadmap'><div>Roadmap</div></a><a class='XURL item_block' href='/source_code' data-target='source_code' data-title='Source code'><div>Source code</div></a><a class='XURL item_block' href='/technology' data-target='technology' data-title='Technology'><div>Technology</div></a><a class='XURL item_block' href='/timeline' data-target='timeline' data-title='Timeline'><div>Timeline</div></a><a class='XURL item_block' href='/user_guide' data-target='user_guide' data-title='User guide'><div>User guide</div></a><a class='XURL item_block' href='/wordlist' data-target='wordlist' data-title='WordList'><div>WordList</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
-<a class='XURL item_block' href='/about_project' data-target='about_project' data-title='About project'><div>About project</div></a><a class='XURL item_block' href='/about_site' data-target='about_site' data-title='About site'><div>About site</div></a><a class='XURL item_block' href='/about_me' data-target='about_me' data-title='About me'><div>About me</div></a><a class='XURL item_block' href='/clientele' data-target='clientele' data-title='Clientele'><div>Clientele</div></a><a class='XURL item_block' href='/media' data-target='media' data-title='Media'><div>Media</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<a class='XURL item_block' href='/about_project' data-target='about_project' data-title='About project'><div>About project</div></a><a class='XURL item_block' href='/about_site' data-target='about_site' data-title='About site'><div>About site</div></a><a class='XURL item_block' href='/about_me' data-target='about_me' data-title='About me'><div>About me</div></a><a class='XURL item_block' href='/clientele' data-target='clientele' data-title='Clientele'><div>Clientele</div></a><a class='XURL item_block' href='/media' data-target='media' data-title='Media'><div>Media</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 		</div>
 	</div>
 </div>
@@ -2041,12 +2133,12 @@ ul li span {
 <div id='nav-list' class='center page-list'>
 	<a id='nav-menu-prev'
 			class='XURL item_block_container' href='/guidelines' data-target='guidelines' data-title='Guidelines' >
-		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' alt='Navigation - previous page tile'><div class='item_block_text'><div class='arrow'>&#x25C4;</div><div>Guidelines</div></div>
+		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' loading='lazy' alt='Navigation - previous page tile'><div class='item_block_text'><div class='arrow'>&#x25C4;</div><div>Guidelines</div></div>
 		</a><a id='nav-menu-next'
 			class='XURL item_block_container' href='/in_pictures' data-target='in_pictures' data-title='In pictures' >
-		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' alt='Navigation - next page tile'><div class='item_block_text'><div>In pictures</div><div class='arrow'>&#x25BA;</div></div>
+		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' loading='lazy' alt='Navigation - next page tile'><div class='item_block_text'><div>In pictures</div><div class='arrow'>&#x25BA;</div></div>
 	</a><a id='nav-menu-up' class='XURL item_block_container center-arrow' href='/' data-target='root' data-title='WCode'>
-		<img class='item_block_image item_block_image_hidden' src='/root.svg ' alt='Navigation - up level tile'><div class='item_block_text'><div></div><div class='arrow'>&#x25B2;</div></div>
+		<img class='item_block_image item_block_image_hidden' loading='lazy' src='/root.svg ' alt='Navigation - up level tile'><div class='item_block_text'><div></div><div class='arrow'>&#x25B2;</div></div>
 	</a>
 </div>
 									</div>
@@ -2313,11 +2405,9 @@ ul li span {
 </span></a>
 			</span>
 		</div>
-		<div class='footer-content' id='footer-rights'>
-			<a class="content-link-gray XURL" href='/license' data-target='license' data-title='License'>Some rights reserved</a>
-		</div>
 		<div class='footer-content'>
-			by <a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a><a class='content-link' target='_blank' href='/about_me' rel='author'></a>
+			<a class="content-link-gray XURL" href='/license' data-target='license' data-title='License'>Copyright &copy; 2019</a>
+			<a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a><a class='content-link' target='_blank' href='/about_me' rel='author'></a>
 		</div>
 	</div>
 </div>
