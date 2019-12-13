@@ -589,11 +589,13 @@ function setWordList(matchString, white__black) {
 	x.setAttribute('id', id);
 	document.getElementById(id).replaceWith(x);
 }
+var MAX_WORD_LENGTH = 10;
 var bSearch_selected = false;
 
 function execSearch(event) {
 	var input = word_search_box.value.toLowerCase();
 	if(input.length == 0) {
+		document.getElementById('wordlist-message').innerText = '';
 		document.getElementById('search_input_clear').classList.add('hide');
 		clearWordListSearch();
 	}
@@ -609,7 +611,13 @@ function execSearch(event) {
 		}
 		return;
 	}
+	else if(input.length > 10) {
+		document.getElementById('wordlist-table-white').innerText = '';
+		document.getElementById('wordlist-table-black').innerText = '';
+		document.getElementById('wordlist-message').innerText = "Word's length exceeds the maximum limit of " + MAX_WORD_LENGTH + " characters";
+	}
 	else {
+		document.getElementById('wordlist-message').innerText = '';
 		document.getElementById('search_input_clear').classList.remove('hide');
 		bSearch_selected = false;
 		setWordList(input, true);
