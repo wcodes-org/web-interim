@@ -450,10 +450,6 @@ function setXURL(node) {
 }
 var initLoadDone = false;
 initLoad();
-function about_me() {
-	if(typeof twttr !== 'undefined')
-		twttr.widgets.load();
-}
 function presentation() {
 	beginLoading();
 	fadeLoading();
