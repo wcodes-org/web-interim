@@ -1096,6 +1096,13 @@ body {
 .pml-open #nav-menu {
 	transform: translateX(0)
 }
+@media print {
+	
+	.pagebreak {
+		page-break-before: always;
+	}
+	
+}
 .shadow-scroll-top {
 	height: 4px;
 }
@@ -2160,8 +2167,8 @@ ul li span {
 			class='XURL item_block_container' href='/in_pictures' data-target='in_pictures' data-title='In pictures' >
 		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' loading='lazy' alt='Navigation - previous page tile'><div class='item_block_text'><div class='arrow'>&#x25C4;</div><div>In pictures</div></div>
 		</a><a id='nav-menu-next'
-			class='XURL item_block_container' href='/logo' data-target='logo' data-title='Logo' >
-		<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' loading='lazy' alt='Navigation - next page tile'><div class='item_block_text'><div>Logo</div><div class='arrow'>&#x25BA;</div></div>
+			class='XURL item_block_container' href='/location' data-target='location' data-title='Location' >
+		<img class='item_block_image item_block_image_visible' src='/location/index.png' loading='lazy' alt='Navigation - next page tile'><div class='item_block_text'><div>Location</div><div class='arrow'>&#x25BA;</div></div>
 		</a><a id='nav-menu-up' class='XURL item_block_container center-arrow' href='/' data-target='root' data-title='WCode'>
 		<img class='item_block_image item_block_image_hidden' loading='lazy' src='/root.svg ' alt='Navigation - up level tile'><div class='item_block_text'><div></div><div class='arrow'>&#x25B2;</div></div>
 	</a> </div>
