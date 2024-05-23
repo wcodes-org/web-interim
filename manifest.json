@@ -1,8 +1,6 @@
 {
 	"name": "WCodes",
-	"short_name": "<br />
-<b>Warning</b>:  Undefined array key "project_short_name" in <b>/app/site/project/root/Framework/Files/Manifest.json.php</b> on line <b>6</b><br />
-",
+	"short_name": "WCodes",
 	"icons": [
 		{
 			"src": "launcher-icon-0-75x.png",
